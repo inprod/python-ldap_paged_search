@@ -39,7 +39,9 @@ Manual installation::
 Usage
 =====
 
-Initial setup::
+Initial setup
+
+.. code:: python
 
     from ldappagedsearch import LdapPagedSearch
 
@@ -65,21 +67,21 @@ Defining a callback method::
     def myCallback(dn,record):
         print dn, record
 
-Query using 'with' ::
+Query using 'with'::
 
     with LdapPagedSearch(url, username, password, maxPages=2, pageSize=2 ) as l:
         results = l.search(baseDN, searchFilter, callback = myCallback)
 
         # maxPages, pageSize, and callback are all OPTIONAL
 
-Another way t0o query ::
+Another way t0o query::
 
     l = LdapPagedSearch(url, username, password, maxPages=2, pageSize=2 )
     results = l.search(baseDN, searchFilter, callback = myCallback)
     
     # maxPages, pageSize, and callback are all OPTIONAL
 
-Results format ::
+Results format::
 
     # If you don't set a callback, your results will be returned as follows
 
