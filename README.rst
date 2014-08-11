@@ -64,9 +64,9 @@ Initial setup
 
     # Optional values
     maxPages        = 0     # 0 = everything
-    maxPages        = 1000  # Return first 10 paged only
+    maxPages        = 10    # Return first 10 pages only
 
-    attributes      = ['*'] # Return all fields
+    attributes      = ['*']                         # Return all fields
     attributes      = ['FieldName', 'AnotherField'] # Return specific fields only
                             
 
