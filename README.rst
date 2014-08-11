@@ -40,7 +40,7 @@ Usage
 =====
 
 Initial setup
-.. code-block:: python
+.. code-block::
     from ldappagedsearch import LdapPagedSearch
 
     # Required values
@@ -58,7 +58,7 @@ Initial setup
                             # Usual max is 1000; check your LDAP server docs
 
 Defining a callback method 
-.. code-block:: python
+.. code-block::
     # Using a callback method to process results uses less memory on large queries
     # Not using a callback search() will return all results as a single list
 
@@ -66,21 +66,21 @@ Defining a callback method
         print dn, record
 
 Query using 'with' 
-.. code-block:: python
+.. code-block::
     with LdapPagedSearch(url, username, password, maxPages=2, pageSize=2 ) as l:
         results = l.search(baseDN, searchFilter, callback = myCallback)
 
         # maxPages, pageSize, and callback are all OPTIONAL
 
 Another way t0o query 
-.. code-block:: python
+.. code-block::
     l = LdapPagedSearch(url, username, password, maxPages=2, pageSize=2 )
     results = l.search(baseDN, searchFilter, callback = myCallback)
     
     # maxPages, pageSize, and callback are all OPTIONAL
 
 Results format 
-.. code-block:: python
+.. code-block::
     # If you don't set a callback, your results will be returned as follows
 
     [
