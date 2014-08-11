@@ -27,13 +27,11 @@ Installation
 
 Via pip or easy_install
 
-.. code-block::
     $ sudo pip install ldap_paged_search   # If you prefer PIP
     $ sudo easy_install ldap_paged_search  # If you prefer easy_install
 
 Manual installation
 
-.. code-block:: 
     $ git clone https://github.com/neoCrimeLabs/python-ldap_paged_search.git
     $ cd python-ldap_paged_search
     $ sudo python setup.py install
@@ -43,7 +41,6 @@ Usage
 
 Initial setup
 
-.. code-block::
     from ldappagedsearch import LdapPagedSearch
 
     # Required values
@@ -62,7 +59,6 @@ Initial setup
 
 Defining a callback method 
 
-.. code-block::
     # Using a callback method to process results uses less memory on large queries
     # Not using a callback search() will return all results as a single list
 
@@ -71,7 +67,6 @@ Defining a callback method
 
 Query using 'with' 
 
-.. code-block::
     with LdapPagedSearch(url, username, password, maxPages=2, pageSize=2 ) as l:
         results = l.search(baseDN, searchFilter, callback = myCallback)
 
@@ -79,7 +74,6 @@ Query using 'with'
 
 Another way t0o query 
 
-.. code-block::
     l = LdapPagedSearch(url, username, password, maxPages=2, pageSize=2 )
     results = l.search(baseDN, searchFilter, callback = myCallback)
     
@@ -87,7 +81,6 @@ Another way t0o query
 
 Results format 
 
-.. code-block::
     # If you don't set a callback, your results will be returned as follows
 
     [
