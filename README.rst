@@ -64,6 +64,12 @@ Initial setup
 
     # Optional values
     maxPages        = 0     # 0 = everything
+    maxPages        = 1000  # Return first 10 paged only
+
+    attributes      = ['*'] # Return all fields
+    attributes      = ['FieldName', 'AnotherField'] # Return specific fields only
+                            
+
     pageSize        = 1000  # How many records per page
                             # Usual max is 1000; check your LDAP server docs
 
@@ -83,10 +89,10 @@ Query using 'with'
 
 .. code:: python
 
-    # maxPages, pageSize, and callback are all OPTIONAL
+    # maxPages, pageSize, attributes, and callback are all OPTIONAL
 
     with LdapPagedSearch(url, username, password, maxPages=2, pageSize=2 ) as l:
-        results = l.search(baseDN, searchFilter, callback = myCallback)
+        results = l.search(baseDN, searchFilter, attributes = attributes, callback = myCallback)
 
 
 Alternative query method
@@ -94,10 +100,10 @@ Alternative query method
 
 .. code:: python
 
-    # maxPages, pageSize, and callback are all OPTIONAL
+    # maxPages, pageSize, attributes, and callback are all OPTIONAL
 
     l = LdapPagedSearch(url, username, password, maxPages=2, pageSize=2 )
-    results = l.search(baseDN, searchFilter, callback = myCallback)
+    results = l.search(baseDN, searchFilter, attributes = attributes, callback = myCallback)
     
 
 Results format
