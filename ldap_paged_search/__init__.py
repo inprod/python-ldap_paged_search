@@ -22,8 +22,6 @@
 import ldap
 from   ldap.controls import SimplePagedResultsControl
 
-class
-
 
 class LdapPagedSearch( object ):
 
@@ -43,15 +41,17 @@ class LdapPagedSearch( object ):
         self.directSearch           = False
 
 
-    def __enter__(self):
-        self.ldap.bind_s( self.username, self.password )
-        self.connected = True
+    def __enter__( self ):
+        if self.connected is False:
+            self.ldap.bind_s( self.username, self.password )
+            self.connected = True
         return self
 
 
-    def __exit__(self, type, value, traceback):
-        self.ldap.unbind_s()
-        self.connected = False
+    def __exit__( self, type, value, traceback ):
+        if self.connected is True:
+            self.connected = False
+            self.ldap.unbind_s()
 
 
     def _getPageCookie( self, serverControls ):
