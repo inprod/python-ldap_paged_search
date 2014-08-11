@@ -28,7 +28,7 @@ Installation
 Via pip or easy_install
 -----------------------
 
-.. code::
+.. code:: bash
 
     $ sudo pip install ldap_paged_search   # If you prefer PIP
     $ sudo easy_install ldap_paged_search  # If you prefer easy_install
@@ -36,7 +36,7 @@ Via pip or easy_install
 Manual installation
 -------------------
 
-.. code::
+.. code:: bash
 
     $ git clone https://github.com/neoCrimeLabs/python-ldap_paged_search.git
     $ cd python-ldap_paged_search
@@ -81,21 +81,21 @@ Query using 'with'
 ------------------
 
 .. code:: python
+    # maxPages, pageSize, and callback are all OPTIONAL
 
     with LdapPagedSearch(url, username, password, maxPages=2, pageSize=2 ) as l:
         results = l.search(baseDN, searchFilter, callback = myCallback)
 
-        # maxPages, pageSize, and callback are all OPTIONAL
 
-Another way t0o query
----------------------
+Alternative query method
+------------------------
 
 .. code:: python
+    # maxPages, pageSize, and callback are all OPTIONAL
 
     l = LdapPagedSearch(url, username, password, maxPages=2, pageSize=2 )
     results = l.search(baseDN, searchFilter, callback = myCallback)
     
-    # maxPages, pageSize, and callback are all OPTIONAL
 
 Results format
 --------------
