@@ -9,10 +9,10 @@ ldap_paged_search is a python library to easily perform LDAP queries with more
 than 1000 results, or to break down queries into smaller result sets to reduce
 server loads.
 
-Many LDAP servers will not return more than 1000 results unless paged requests
-are used.  The existing python ldap library does support pageing, but requires
-some not very intuitive coding to perform it.  This library is simply a wrapper
-for that code.
+Many LDAP servers, such as active directory, will not return more than 1000
+results unless paged requests are used.  The existing python ldap library does
+support pageing, but requires some not very intuitive coding to perform it.
+This library is simply a wrapper to make paged searches easy.
 
 Its interface is also slightly easier to perform queries than the LDAP library
 it wraps.
@@ -125,4 +125,19 @@ Results format
         ...
     ]
 
-    
+Conditions of Use
+=================
+
+I wrote this library for my own use, but realized others may find it useful as
+there were many forum topics describing this problem.
+
+Unfortunately I cannot guarentee any active support, but will do my best as time
+permits.  That said, I'll happily accept push requests with suitable changes
+that address the general audience of this library.
+
+Put simply, use this at your own risk.  If it works, great!  If not, I may not
+be able to help you.  If you fix anything, however, please push it back and I'll
+likely accept it.  :-)
+
+Also, if you use this library in your package, tool, or comercial software, let
+me know, and I'll list it here!
