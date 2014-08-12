@@ -32,6 +32,7 @@ Via pip or easy_install
 .. code:: bash
 
     $ sudo pip install ldap_paged_search   # If you prefer PIP
+
     $ sudo easy_install ldap_paged_search  # If you prefer easy_install
 
 Manual installation
