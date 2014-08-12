@@ -1,5 +1,5 @@
 =============================
-python-ldap_paged_search v0.2
+python-ldap_paged_search v0.3
 =============================
 
 Summary
