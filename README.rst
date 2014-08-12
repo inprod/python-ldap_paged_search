@@ -1,5 +1,5 @@
 =============================
-python-ldap_paged_search v0.1
+python-ldap_paged_search v0.2
 =============================
 
 Summary
@@ -52,7 +52,7 @@ Initial setup
 
 .. code:: python
 
-    from ldappagedsearch import LdapPagedSearch
+    from ldap_paged_search import LdapPagedSearch
 
     # Required values
     url             = 'ldap://your.ldap.server'
