@@ -116,13 +116,11 @@ Results format
 
     [
         ('DistinctName1',
-            {
-                'FieldName':    ['value1', 'value2'],
-                'AnotherField': ['value'], }),
+            {  'FieldName':    ['value1', 'value2'],
+               'AnotherField': ['value'], }),
         ('DistinctName2',
-            {
-                'FieldName':    ['value1', 'value2'],
-                'AnotherField': ['value'], }),
+            {  'FieldName':    ['value1', 'value2'],
+               'AnotherField': ['value'], }),
         ...
     ]
 
