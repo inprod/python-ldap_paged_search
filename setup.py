@@ -1,15 +1,21 @@
 #!/usr/bin/env python
 from os.path import exists
-from distutils.core import setup
+from setuptools import setup
 
 if exists('README.rst'):
     desc = open('README.rst').read()
 else:
     desc = ''
 
+if exists('requirements.txt'):
+    with open('requirements.txt') as f:
+        required = f.read().splitlines()
+else:
+    required = []
+
 setup(
     name                =   'ldap_paged_search',
-    version             =   '0.3',
+    version             =   '0.4',
     packages            =   ['ldap_paged_search'],
     license             =   'LGPLv2.1',
     description         =   'Easily perform LDAP queries with more than 1000 results',
@@ -17,6 +23,7 @@ setup(
     author_email        =   'mhenry@neocri.me',
     url                 =   'https://github.com/neoCrimeLabs/python-ldap_paged_search',
     long_description    =   desc,
+    install_requires    =   required,
     classifiers         =   [
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
