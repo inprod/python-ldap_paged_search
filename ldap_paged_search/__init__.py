@@ -112,7 +112,7 @@ class LdapPagedSearch( object ):
         while True:
             page += 1
 
-            data, serverControls = _doSearch(baseDN, searchFilter, attributes, pageControl )
+            data, serverControls = self._doSearch(baseDN, searchFilter, attributes, pageControl )
 
             results += self._handleResults( data, callback )
 
