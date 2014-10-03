@@ -118,7 +118,7 @@ class LdapPagedSearch( object ):
 
             if serverControls:
                 cookie = self._getPageCookie( serverControls )
-                if cookie is not None:
+                if cookie:
                     pageControl = self._setPageControl( cookie = cookie )
                 else:
                     break

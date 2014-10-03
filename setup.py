@@ -15,7 +15,7 @@ else:
 
 setup(
     name                =   'ldap_paged_search',
-    version             =   '0.4.1',
+    version             =   '0.4.2',
     packages            =   ['ldap_paged_search'],
     license             =   'LGPLv2.1',
     description         =   'Easily perform LDAP queries with more than 1000 results',
